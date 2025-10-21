@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbalife APAC E-commerce Study - Daniel Cooper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #00a651 0%, #008542 100%);
+            color: white;
+            padding: 100px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-meta-item strong {
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .section {
+            margin-bottom: 100px;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #00a651;
+        }
+
+        .section-intro {
+            font-size: 20px;
+            color: #5a5a5a;
+            max-width: 900px;
+            line-height: 1.6;
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            padding: 48px;
+            border-left: 6px solid #00a651;
+        }
+
+        .role-card h3 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            color: #00a651;
+        }
+
+        .role-card p {
+            font-size: 18px;
+            color: #3a3a3a;
+            margin-bottom: 24px;
+        }
+
+        .role-responsibilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .responsibility-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #00a651;
+        }
+
+        .responsibility-item strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #00a651;
+        }
+
+        .responsibility-item span {
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .question-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .question-card:nth-child(1) { border-top-color: #00a651; }
+        .question-card:nth-child(2) { border-top-color: #008542; }
+        .question-card:nth-child(3) { border-top-color: #006837; }
+
+        .question-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #e9ecef;
+            margin-bottom: 16px;
+        }
+
+        .question-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .recruitment-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #00a651 0%, #008542 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .country-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .country-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #00a651;
+        }
+
+        .country-participants {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .country-percentage {
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+
+        .methodology-timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 48px;
+        }
+
+        .methodology-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #00a651 0%, #008542 100%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 48px;
+            padding-left: 32px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -48px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background: #00a651;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #00a651;
+        }
+
+        .timeline-phase {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #00a651;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .timeline-description {
+            font-size: 16px;
+            color: #5a5a5a;
+            margin-bottom: 16px;
+        }
+
+        .timeline-details {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+
+        .timeline-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .timeline-detail-item strong {
+            color: #00a651;
+        }
+
+        .rationale-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .rationale-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .rationale-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .rationale-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #00a651;
+        }
+
+        .rationale-text {
+            font-size: 15px;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+
+        .insights-container {
+            margin-top: 48px;
+        }
+
+        .insight-block {
+            background: white;
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border-left: 8px solid #00a651;
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .insight-number {
+            background: #00a651;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .insight-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .insight-content {
+            font-size: 18px;
+            color: #3a3a3a;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .insight-data {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .insight-data-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #00a651;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .data-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .data-item {
+            text-align: center;
+        }
+
+        .data-region {
+            font-size: 14px;
+            color: #5a5a5a;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .data-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #00a651;
+        }
+
+        .data-label {
+            font-size: 12px;
+            color: #5a5a5a;
+            margin-top: 4px;
+        }
+
+        .quote-callout {
+            background: linear-gradient(135deg, rgba(0, 166, 81, 0.1) 0%, rgba(0, 133, 66, 0.1) 100%);
+            border-left: 4px solid #00a651;
+            padding: 32px;
+            border-radius: 12px;
+            margin: 32px 0;
+            font-style: italic;
+            font-size: 20px;
+            color: #1a1a1a;
+        }
+
+        .opportunities-header {
+            background: linear-gradient(135deg, #00a651 0%, #008542 100%);
+            color: white;
+            padding: 48px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .opportunities-header h3 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .opportunities-header p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .opportunity-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .opportunity-card {
+            background: white;
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .opportunity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #00a651 0%, #008542 100%);
+        }
+
+        .opportunity-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .opportunity-description {
+            font-size: 16px;
+            color: #5a5a5a;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .opportunity-impact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .impact-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .impact-high {
+            background: rgba(0, 166, 81, 0.15);
+            color: #00a651;
+        }
+
+        .impact-medium {
+            background: rgba(255, 193, 7, 0.15);
+            color: #f57c00;
+        }
+
+        .timeline-badge {
+            font-size: 13px;
+            color: #5a5a5a;
+            font-weight: 600;
+        }
+
+        .case-study-footer {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            padding: 60px 48px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .case-study-footer h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00a651;
+        }
+
+        .case-study-footer p {
+            font-size: 18px;
+            color: #3a3a3a;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .methodology-timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Localizing E-commerce for APAC Markets</h1>
+            <p class="hero-subtitle">How Herbalife's digital experience differs across cultures—and what that means for conversion</p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <strong>Research Type:</strong> Mixed Methods (A/B Testing, Tree Sorting, Usability Testing)
+                </div>
+                <div class="hero-meta-item">
+                    <strong>Markets:</strong> Taiwan, Malaysia, Indonesia, Philippines
+                </div>
+                <div class="hero-meta-item">
+                    <strong>Timeline:</strong> 6 Weeks
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- My Role -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">My Role</h2>
+                <p class="section-intro">As the lead researcher on this cross-cultural study, I designed and executed a comprehensive research program to understand how Herbalife's e-commerce experience resonates with active buyers across four key APAC markets.</p>
+            </div>
+
+            <div class="role-card">
+                <h3>Senior UX Researcher, Cross-Cultural E-commerce</h3>
+                <p>This project required navigating the complexity of cultural nuance, multiple methodologies, and coordinating research across four countries simultaneously. I was responsible for the entire research lifecycle, from initial scoping to final recommendations, while also building the capabilities of our junior research team.</p>
+                
+                <div class="role-responsibilities">
+                    <div class="responsibility-item">
+                        <strong>Research Strategy</strong>
+                        <span>Designed multi-method approach combining quantitative A/B testing with qualitative usability insights</span>
+                    </div>
+                    <div class="responsibility-item">
+                        <strong>International Recruitment</strong>
+                        <span>Coordinated recruitment of 94 active Herbalife buyers across Taiwan, Malaysia, Indonesia, and Philippines via UserTesting.com</span>
+                    </div>
+                    <div class="responsibility-item">
+                        <strong>Methodology Development</strong>
+                        <span>Created testing protocols that balanced consistency across markets with cultural sensitivity</span>
+                    </div>
+                    <div class="responsibility-item">
+                        <strong>Data Synthesis</strong>
+                        <span>Analyzed patterns across A/B tests, tree sorting exercises, and usability sessions to identify regional differences</span>
+                    </div>
+                    <div class="responsibility-item">
+                        <strong>Team Leadership & Mentorship</strong>
+                        <span>Mentored two junior researchers through qualitative analysis processes, teaching thematic coding and insight synthesis techniques</span>
+                    </div>
+                    <div class="responsibility-item">
+                        <strong>Stakeholder Collaboration</strong>
+                        <span>Partnered with regional product teams and global e-commerce leadership to translate insights into action</span>
+                    </div>
+                    <div class="responsibility-item">
+                        <strong>Cultural Consultation</strong>
+                        <span>Worked with in-market consultants to ensure research design respected local contexts and language nuances</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Research Questions -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Key Research Questions</h2>
+                <p class="section-intro">Herbalife's digital team needed to understand whether their US-optimized e-commerce patterns translated effectively to APAC markets, where buying behaviors and information needs might differ significantly.</p>
+            </div>
+
+            <div class="questions-grid">
+                <div class="question-card">
+                    <div class="question-number">01</div>
+                    <div class="question-text">How do Product Display Page (PDP) information priorities differ between APAC and US buyers?</div>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-number">02</div>
+                    <div class="question-text">Do APAC users organize and categorize products differently than US users when navigating Product Listing Pages (PLPs)?</div>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-number">03</div>
+                    <div class="question-text">What are the critical differences in purchase journey expectations across Taiwan, Malaysia, Indonesia, and the Philippines?</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recruitment -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Recruitment Strategy</h2>
+                <p class="section-intro">To ensure authentic insights, we recruited only active Herbalife product buyers—users who had made at least one purchase in the past 90 days and demonstrated genuine engagement with the brand.</p>
+            </div>
+
+            <div class="recruitment-stats">
+                <div class="stat-box">
+                    <span class="stat-number">420+</span>
+                    <span class="stat-label">Screening Pool</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">94</span>
+                    <span class="stat-label">Final Participants</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">APAC Markets</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Active Buyers</span>
+                </div>
+            </div>
+
+            <div class="country-grid">
+                <div class="country-card">
+                    <div class="country-name">🇹🇼 Taiwan</div>
+                    <div class="country-participants">26</div>
+                    <div class="country-percentage">28% of sample</div>
+                </div>
+                <div class="country-card">
+                    <div class="country-name">🇲🇾 Malaysia</div>
+                    <div class="country-participants">24</div>
+                    <div class="country-percentage">26% of sample</div>
+                </div>
+                <div class="country-card">
+                    <div class="country-name">🇮🇩 Indonesia</div>
+                    <div class="country-participants">22</div>
+                    <div class="country-percentage">23% of sample</div>
+                </div>
+                <div class="country-card">
+                    <div class="country-name">🇵🇭 Philippines</div>
+                    <div class="country-participants">22</div>
+                    <div class="country-percentage">23% of sample</div>
+                </div>
+            </div>
+
+            <div class="quote-callout">
+                "Recruiting active buyers rather than general consumers was critical—these participants brought real purchase context and genuine product knowledge to their feedback."
+            </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Methodology</h2>
+                <p class="section-intro">A three-phase mixed-methods approach allowed us to measure behavioral differences quantitatively while understanding the "why" behind those differences through qualitative observation.</p>
+            </div>
+
+            <div class="methodology-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-phase">Phase 1</div>
+                    <div class="timeline-title">A/B Testing - Product Display Pages</div>
+                    <div class="timeline-description">Participants compared two versions of product pages with different information hierarchies and content emphasis. We measured preference, comprehension, and purchase confidence.</div>
+                    <div class="timeline-details">
+                        <div class="timeline-detail-item">
+                            <strong>Sample Size:</strong> 94 participants
+                        </div>
+                        <div class="timeline-detail-item">
+                            <strong>Duration:</strong> 8-10 minutes per session
+                        </div>
+                        <div class="timeline-detail-item">
+                            <strong>Metrics:</strong> Preference rate, time to decision, confidence scores
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">Phase 2</div>
+                    <div class="timeline-title">Tree Sorting - Information Architecture</div>
+                    <div class="timeline-description">Users organized 35 Herbalife products into their own intuitive category structures. This revealed how APAC buyers naturally group products versus US-designed taxonomies.</div>
+                    <div class="timeline-details">
+                        <div class="timeline-detail-item">
+                            <strong>Sample Size:</strong> 94 participants
+                        </div>
+                        <div class="timeline-detail-item">
+                            <strong>Duration:</strong> 12-15 minutes per session
+                        </div>
+                        <div class="timeline-detail-item">
+                            <strong>Analysis:</strong> Similarity matrices, dendrogram clustering
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">Phase 3</div>
+                    <div class="timeline-title">Unmoderated Usability Testing</div>
+                    <div class="timeline-description">Participants completed realistic purchase scenarios while thinking aloud, revealing friction points, decision-making patterns, and expectations throughout the buying journey.</div>
+                    <div class="timeline-details">
+                        <div class="timeline-detail-item">
+                            <strong>Sample Size:</strong> 94 participants
+                        </div>
+                        <div class="timeline-detail-item">
+                            <strong>Duration:</strong> 20-25 minutes per session
+                        </div>
+                        <div class="timeline-detail-item">
+                            <strong>Scenarios:</strong> 3 task-based scenarios per participant
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why This Methodology -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Why This Methodology?</h2>
+                <p class="section-intro">Each method was chosen to answer a specific layer of the research question, building from quantitative preference to cognitive structure to behavioral reality.</p>
+            </div>
+
+            <div class="rationale-grid">
+                <div class="rationale-card">
+                    <div class="rationale-icon">📊</div>
+                    <div class="rationale-title">A/B Testing: Quantifying Preference</div>
+                    <div class="rationale-text">With 94 participants across four markets, A/B testing provided statistical power to detect real differences in how users responded to content presentation. This gave us confidence that observed patterns weren't coincidental.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">🌳</div>
+                    <div class="rationale-title">Tree Sorting: Revealing Mental Models</div>
+                    <div class="rationale-text">Tree sorting exposed the cognitive structures users bring to product browsing—critical for understanding how to organize navigation that feels intuitive rather than imposed. This method surfaces unconscious categorization patterns.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">🎯</div>
+                    <div class="rationale-title">Usability Testing: Observing Reality</div>
+                    <div class="rationale-text">Think-aloud protocols during realistic tasks showed where theory meets practice. We observed not just what users prefer but what they actually do when faced with real purchase decisions and information-seeking needs.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">🌏</div>
+                    <div class="rationale-title">Remote Unmoderated: Cultural Authenticity</div>
+                    <div class="rationale-text">Testing in users' natural environments, in their own language, on their own devices removed researcher bias and created authentic contexts. UserTesting.com's platform enabled simultaneous multi-market research at scale.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">🔄</div>
+                    <div class="rationale-title">Mixed Methods: Triangulation</div>
+                    <div class="rationale-text">Combining quantitative signals with qualitative context allowed us to both measure differences and understand their causes. Where all three methods aligned, we gained high confidence in our findings.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">⚖️</div>
+                    <div class="rationale-title">Comparative Framework: US Baseline</div>
+                    <div class="rationale-text">Using US patterns as a baseline wasn't about preference but about identifying where localization matters most. This approach helped prioritize which adaptations would have the greatest impact on APAC conversion.</div>
+                </div>
+            </div>
+
+            <div class="quote-callout">
+                "We needed to distinguish between universal e-commerce best practices and culturally-specific patterns. Only a multi-method approach could give us that nuance."
+            </div>
+        </div>
+
+        <!-- Key Insights -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Key Insights</h2>
+                <p class="section-intro">Our research revealed five critical differences between APAC and US buying behaviors, each with clear implications for product design and localization strategy.</p>
+            </div>
+
+            <div class="insights-container">
+                <div class="insight-block">
+                    <div class="insight-header">
+                        <div class="insight-number">1</div>
+                        <div class="insight-title">Social Proof Trumps Expert Authority</div>
+                    </div>
+                    <div class="insight-content">
+                        <p>APAC buyers prioritized customer reviews and testimonials significantly more than US buyers, who showed stronger preference for expert endorsements and clinical studies. In A/B testing, product pages emphasizing peer reviews outperformed expert-led pages by 34% in APAC markets, while the pattern reversed in US comparisons.</p>
+                        <p>This extended to visual hierarchy: APAC participants consistently scrolled to reviews first, while US participants focused on ingredient lists and certifications. Tree sorting revealed APAC users grouped products by "most popular" and "highest rated," while US users organized by "product type" and "health goal."</p>
+                    </div>
+                    <div class="insight-data">
+                        <div class="insight-data-title">Preference for Review-Focused PDPs</div>
+                        <div class="data-comparison">
+                            <div class="data-item">
+                                <div class="data-region">APAC Markets</div>
+                                <div class="data-value">73%</div>
+                                <div class="data-label">Preferred review-first layout</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">US Baseline</div>
+                                <div class="data-value">39%</div>
+                                <div class="data-label">Preferred review-first layout</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-block">
+                    <div class="insight-header">
+                        <div class="insight-number">2</div>
+                        <div class="insight-title">Payment Method Expectations Create Conversion Barriers</div>
+                    </div>
+                    <div class="insight-content">
+                        <p>One of the most critical friction points emerged during checkout: APAC users expected region-specific payment methods that weren't available in the current implementation. 68% of participants expressed confusion or concern when they couldn't find familiar payment options.</p>
+                        <p><strong>Indonesia:</strong> 82% of participants expected to see GoPay, OVO, or Dana as payment options. Several abandoned mock checkouts when only credit cards were offered, with one participant saying, "I don't use credit cards for online shopping—this feels unsafe."</p>
+                        <p><strong>Malaysia:</strong> 71% looked for Touch 'n Go eWallet or Grab Pay. Participants described PayPal as "outdated" and preferred mobile wallet integration.</p>
+                        <p><strong>Philippines:</strong> 64% expected GCash or PayMaya options. Credit card hesitancy was particularly high, with participants citing security concerns and preference for load-based payments.</p>
+                        <p><strong>Taiwan:</strong> 59% expected LINE Pay or JKO Pay integration, though credit card acceptance was higher than other markets.</p>
+                    </div>
+                    <div class="insight-data">
+                        <div class="insight-data-title">Payment Method Preferences by Market</div>
+                        <div class="data-comparison">
+                            <div class="data-item">
+                                <div class="data-region">Indonesia</div>
+                                <div class="data-value">82%</div>
+                                <div class="data-label">Prefer mobile wallets</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">Malaysia</div>
+                                <div class="data-value">71%</div>
+                                <div class="data-label">Prefer mobile wallets</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">Philippines</div>
+                                <div class="data-value">64%</div>
+                                <div class="data-label">Prefer mobile wallets</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">Taiwan</div>
+                                <div class="data-value">59%</div>
+                                <div class="data-label">Prefer mobile wallets</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-callout">
+                        "When I see only credit card options, I assume this website isn't really for my market. It feels like a US site that forgot about us." — Malaysian participant, age 34
+                    </div>
+                </div>
+
+                <div class="insight-block">
+                    <div class="insight-header">
+                        <div class="insight-number">3</div>
+                        <div class="insight-title">Checkout Flow Expectations Diverge Significantly</div>
+                    </div>
+                    <div class="insight-content">
+                        <p>The linear, streamlined checkout flow optimized for US users created frustration for APAC participants who expected different patterns and more flexibility throughout the purchase process.</p>
+                        <p><strong>Order Review Anxiety:</strong> 76% of APAC participants repeatedly returned to previous checkout steps to verify their selections, compared to 31% in US baseline data. The one-page checkout that tested well in the US felt "too fast" and "not secure enough" for APAC users who wanted clear stage-by-stage confirmation.</p>
+                        <p><strong>Guest Checkout Resistance:</strong> 83% of participants preferred to create accounts before purchasing, contrary to US patterns favoring guest checkout. Users cited concerns about tracking orders, accessing customer service, and building relationships with the brand. The prominent "Continue as Guest" option that reduces US friction actually increased APAC abandonment.</p>
+                        <p><strong>Price Transparency Issues:</strong> 64% of participants expressed confusion about final pricing, expecting to see detailed breakdowns including taxes, fees, and shipping costs much earlier in the flow. Several participants abandoned when these weren't visible on the cart page.</p>
+                        <p><strong>Contact Information Timing:</strong> Participants wanted to provide phone numbers and preferred contact methods at the beginning of checkout, not at the end. 71% expressed that "they should ask for my phone number first in case there's a problem with delivery."</p>
+                    </div>
+                    <div class="insight-data">
+                        <div class="insight-data-title">Checkout Behavior Comparison</div>
+                        <div class="data-comparison">
+                            <div class="data-item">
+                                <div class="data-region">APAC</div>
+                                <div class="data-value">76%</div>
+                                <div class="data-label">Returned to verify steps</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">US Baseline</div>
+                                <div class="data-value">31%</div>
+                                <div class="data-label">Returned to verify steps</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">APAC</div>
+                                <div class="data-value">83%</div>
+                                <div class="data-label">Prefer account creation</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">US Baseline</div>
+                                <div class="data-value">42%</div>
+                                <div class="data-label">Prefer account creation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-block">
+                    <div class="insight-header">
+                        <div class="insight-number">4</div>
+                        <div class="insight-title">Language Localization Beyond Translation</div>
+                    </div>
+                    <div class="insight-content">
+                        <p>While the site was translated into local languages, numerous language-related usability issues emerged that went deeper than word-for-word translation—revealing gaps in cultural adaptation and linguistic nuance.</p>
+                        <p><strong>Measurement Systems:</strong> Product descriptions using imperial measurements (ounces, pounds) created confusion across all markets. 89% of participants couldn't easily convert or estimate product sizes, leading to uncertainty about value and serving sizes. One Indonesian participant said, "I have no idea if 16 ounces is a lot or a little."</p>
+                        <p><strong>Tone and Formality:</strong> Marketing copy translated directly from English felt either too casual or inappropriately formal depending on the market. Malaysian and Indonesian participants noted that some product descriptions felt "too American" and didn't match local communication styles for health products.</p>
+                        <p><strong>Terminology Inconsistency:</strong> Product categories and filters used different terms across pages, creating confusion during navigation. Junior researchers analyzing session recordings identified 23 instances where participants searched for products using different vocabulary than the site's taxonomy.</p>
+                        <p><strong>Ingredient Names:</strong> Scientific ingredient names were often untranslated, leaving participants uncertain about what they were buying. 67% of users cross-referenced ingredient lists with external search engines, adding friction to the purchase decision.</p>
+                        <p><strong>Call-to-Action Clarity:</strong> Button labels like "Add to Cart" and "Checkout" tested poorly in literal translations. Participants expected more specific, action-oriented language that communicated next steps and commitment levels more clearly.</p>
+                    </div>
+                    <div class="insight-data">
+                        <div class="insight-data-title">Language-Related Pain Points</div>
+                        <div class="data-comparison">
+                            <div class="data-item">
+                                <div class="data-region">All Markets</div>
+                                <div class="data-value">89%</div>
+                                <div class="data-label">Confused by imperial measurements</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">All Markets</div>
+                                <div class="data-value">67%</div>
+                                <div class="data-label">Cross-referenced ingredients externally</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">Malaysia/Indonesia</div>
+                                <div class="data-value">58%</div>
+                                <div class="data-label">Found tone inappropriate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-callout">
+                        "The translation is correct, but it doesn't feel like it's written for me. It's like they ran it through Google Translate and called it done." — Taiwanese participant, age 29
+                    </div>
+                </div>
+
+                <div class="insight-block">
+                    <div class="insight-header">
+                        <div class="insight-number">5</div>
+                        <div class="insight-title">Bundle and Subscription Mental Models Differ</div>
+                    </div>
+                    <div class="insight-content">
+                        <p>APAC participants organized products around usage occasions and bundled solutions, while US taxonomy emphasized individual products and subscription models. In tree sorting, 78% of APAC users created categories like "morning routine set" and "weight loss program," demonstrating a preference for holistic, goal-oriented product groupings.</p>
+                        <p>Subscription offers tested poorly across all APAC markets (18% interest vs. 54% in US), with participants expressing preference for flexible, one-time purchases and the ability to mix-and-match products. The "Subscribe & Save" model that drives US conversion actually increased purchase anxiety in APAC contexts.</p>
+                    </div>
+                    <div class="insight-data">
+                        <div class="insight-data-title">Product Organization Preferences</div>
+                        <div class="data-comparison">
+                            <div class="data-item">
+                                <div class="data-region">APAC</div>
+                                <div class="data-value">78%</div>
+                                <div class="data-label">Prefer goal-based bundles</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">APAC</div>
+                                <div class="data-value">18%</div>
+                                <div class="data-label">Interested in subscriptions</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-region">US Baseline</div>
+                                <div class="data-value">54%</div>
+                                <div class="data-label">Interested in subscriptions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-callout">
+                    "Junior researchers on my team conducted deep-dive analysis of the language and checkout issues, identifying patterns I might have missed. Their fresh perspective on cultural nuance was invaluable—they caught terminology inconsistencies that native English speakers would overlook."
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Opportunities -->
+        <div class="section">
+            <div class="opportunities-header">
+                <h3>Research Opportunities & Recommendations</h3>
+                <p>These insights pointed to clear opportunities for localization and further research to optimize conversion across APAC markets.</p>
+            </div>
+
+            <div class="opportunity-cards">
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Payment Gateway Integration</div>
+                    <div class="opportunity-description">
+                        Integrate region-specific mobile wallet payment options (GoPay, OVO, Touch 'n Go, GCash, LINE Pay) into checkout flow. Test impact on cart abandonment rates and conversion across each market.
+                    </div>
+                    <div class="opportunity-impact">
+                        <span class="impact-badge impact-high">High Impact</span>
+                        <span class="timeline-badge">Q1 Priority</span>
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Multi-Step Checkout Redesign</div>
+                    <div class="opportunity-description">
+                        Prototype and test a staged checkout flow with clear progress indicators, early price transparency, and account-first (vs. guest-first) orientation. Validate whether stepped approach reduces anxiety and increases completion.
+                    </div>
+                    <div class="opportunity-impact">
+                        <span class="impact-badge impact-high">High Impact</span>
+                        <span class="timeline-badge">Q1-Q2 Priority</span>
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Cultural Copy Adaptation</div>
+                    <div class="opportunity-description">
+                        Partner with in-market copywriters to rewrite product descriptions, CTAs, and marketing content using culturally appropriate tone, terminology, and measurement systems. Test comprehension and purchase confidence improvements.
+                    </div>
+                    <div class="opportunity-impact">
+                        <span class="impact-badge impact-high">High Impact</span>
+                        <span class="timeline-badge">Ongoing</span>
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Review Infrastructure Enhancement</div>
+                    <div class="opportunity-description">
+                        Redesign PDPs to prominently feature customer reviews, ratings, and testimonials above-the-fold. Conduct follow-up testing on optimal review display formats and social proof mechanisms for each market.
+                    </div>
+                    <div class="opportunity-impact">
+                        <span class="impact-badge impact-medium">Medium Impact</span>
+                        <span class="timeline-badge">Q2 Priority</span>
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Bundle & Program Navigation</div>
+                    <div class="opportunity-description">
+                        Restructure product taxonomy to emphasize goal-based bundles and wellness programs rather than individual products. Test whether this matches APAC mental models and improves findability.
+                    </div>
+                    <div class="opportunity-impact">
+                        <span class="impact-badge impact-medium">Medium Impact</span>
+                        <span class="timeline-badge">Q2-Q3 Priority</span>
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Ingredient Localization Study</div>
+                    <div class="opportunity-description">
+                        Research how to present ingredient information in locally meaningful ways—translating scientific names, providing cultural context for unfamiliar ingredients, and addressing regional health concerns proactively.
+                    </div>
+                    <div class="opportunity-impact">
+                        <span class="impact-badge impact-medium">Medium Impact</span>
+                        <span class="timeline-badge">Q3 Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study Conclusion -->
+        <div class="case-study-footer">
+            <h3>Impact & Outcomes</h3>
+            <p>This research provided Herbalife's product and regional teams with a clear roadmap for APAC localization, moving beyond surface-level translation to address fundamental differences in buying behavior, trust signals, and user expectations. By mentoring junior researchers through the qualitative analysis process, we built internal capacity for ongoing cultural research while delivering actionable insights that directly informed Q1 and Q2 product roadmaps across all four markets.</p>
+        </div>
+    </div>
+</body>
+</html>
