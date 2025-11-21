@@ -19,7 +19,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #00a651 0%, #008542 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 100px 40px 80px;
             position: relative;
@@ -93,7 +93,7 @@
             font-size: 40px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: #00a651;
+            color: #667eea;
         }
 
         .section-intro {
@@ -107,13 +107,13 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border-radius: 20px;
             padding: 48px;
-            border-left: 6px solid #00a651;
+            border-left: 6px solid #667eea;
         }
 
         .role-card h3 {
             font-size: 28px;
             margin-bottom: 24px;
-            color: #00a651;
+            color: #667eea;
         }
 
         .role-card p {
@@ -133,14 +133,21 @@
             background: white;
             padding: 20px;
             border-radius: 12px;
-            border-left: 4px solid #00a651;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .responsibility-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         .responsibility-item strong {
             display: block;
             font-size: 16px;
             margin-bottom: 8px;
-            color: #00a651;
+            color: #667eea;
         }
 
         .responsibility-item span {
@@ -168,9 +175,9 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .question-card:nth-child(1) { border-top-color: #00a651; }
-        .question-card:nth-child(2) { border-top-color: #008542; }
-        .question-card:nth-child(3) { border-top-color: #006837; }
+        .question-card:nth-child(1) { border-top-color: #667eea; }
+        .question-card:nth-child(2) { border-top-color: #764ba2; }
+        .question-card:nth-child(3) { border-top-color: #f57c00; }
 
         .question-number {
             font-size: 48px;
@@ -194,7 +201,7 @@
         }
 
         .stat-box {
-            background: linear-gradient(135deg, #00a651 0%, #008542 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 32px;
             border-radius: 16px;
@@ -228,13 +235,19 @@
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .country-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
         }
 
         .country-name {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 12px;
-            color: #00a651;
+            color: #667eea;
         }
 
         .country-participants {
@@ -262,7 +275,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, #00a651 0%, #008542 100%);
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
             border-radius: 2px;
         }
 
@@ -279,17 +292,17 @@
             top: 8px;
             width: 16px;
             height: 16px;
-            background: #00a651;
+            background: #667eea;
             border-radius: 50%;
             border: 4px solid white;
-            box-shadow: 0 0 0 2px #00a651;
+            box-shadow: 0 0 0 2px #667eea;
         }
 
         .timeline-phase {
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #00a651;
+            color: #667eea;
             font-weight: 600;
             margin-bottom: 8px;
         }
@@ -322,7 +335,7 @@
         }
 
         .timeline-detail-item strong {
-            color: #00a651;
+            color: #667eea;
         }
 
         .rationale-grid {
@@ -337,6 +350,12 @@
             border-radius: 16px;
             padding: 32px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rationale-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
         }
 
         .rationale-icon {
@@ -348,7 +367,7 @@
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 12px;
-            color: #00a651;
+            color: #667eea;
         }
 
         .rationale-text {
@@ -367,7 +386,17 @@
             padding: 48px;
             margin-bottom: 32px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            border-left: 8px solid #00a651;
+            border-left: 8px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .insight-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        }
+
+        .insight-block:nth-child(even) {
+            border-left-color: #f57c00;
         }
 
         .insight-header {
@@ -378,7 +407,7 @@
         }
 
         .insight-number {
-            background: #00a651;
+            background: #667eea;
             color: white;
             width: 48px;
             height: 48px;
@@ -389,6 +418,10 @@
             font-size: 24px;
             font-weight: 700;
             flex-shrink: 0;
+        }
+
+        .insight-block:nth-child(even) .insight-number {
+            background: #f57c00;
         }
 
         .insight-title {
@@ -404,6 +437,14 @@
             margin-bottom: 24px;
         }
 
+        .insight-content p {
+            margin-bottom: 16px;
+        }
+
+        .insight-content p:last-child {
+            margin-bottom: 0;
+        }
+
         .insight-data {
             background: #f8f9fa;
             border-radius: 12px;
@@ -415,7 +456,7 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #00a651;
+            color: #667eea;
             font-weight: 600;
             margin-bottom: 16px;
         }
@@ -440,7 +481,7 @@
         .data-value {
             font-size: 36px;
             font-weight: 700;
-            color: #00a651;
+            color: #667eea;
         }
 
         .data-label {
@@ -450,8 +491,8 @@
         }
 
         .quote-callout {
-            background: linear-gradient(135deg, rgba(0, 166, 81, 0.1) 0%, rgba(0, 133, 66, 0.1) 100%);
-            border-left: 4px solid #00a651;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid #667eea;
             padding: 32px;
             border-radius: 12px;
             margin: 32px 0;
@@ -461,7 +502,7 @@
         }
 
         .opportunities-header {
-            background: linear-gradient(135deg, #00a651 0%, #008542 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 48px;
             border-radius: 20px;
@@ -509,7 +550,7 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(90deg, #00a651 0%, #008542 100%);
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
         }
 
         .opportunity-title {
@@ -545,12 +586,12 @@
         }
 
         .impact-high {
-            background: rgba(0, 166, 81, 0.15);
-            color: #00a651;
+            background: rgba(102, 126, 234, 0.15);
+            color: #667eea;
         }
 
         .impact-medium {
-            background: rgba(255, 193, 7, 0.15);
+            background: rgba(245, 124, 0, 0.15);
             color: #f57c00;
         }
 
@@ -571,7 +612,7 @@
         .case-study-footer h3 {
             font-size: 32px;
             margin-bottom: 20px;
-            color: #00a651;
+            color: #667eea;
         }
 
         .case-study-footer p {
@@ -629,6 +670,124 @@
     </div>
 
     <div class="container">
+        <!-- Project Context & Goals -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Project Context & Goals</h2>
+                <p class="section-intro">When Herbalife launched a new app optimized for the North American market, a critical question emerged: Would this experience translate effectively to APAC—one of Herbalife's largest user concentrations?</p>
+            </div>
+
+            <div class="insight-block">
+                <div class="insight-header">
+                    <div class="insight-number">🎯</div>
+                    <div class="insight-title">Research Challenge</div>
+                </div>
+                <div class="insight-content">
+                    <p>The new app represented significant investment in user experience improvements based on North American research—streamlined navigation, integrated digital wallet payments, and refined checkout flows. Before rolling out globally, leadership needed to understand how these North America-optimized patterns would perform in APAC markets where user behaviors, payment ecosystems, and digital commerce maturity levels differed significantly.</p>
+                    <p><strong>Our target region:</strong> Taiwan, Malaysia, Indonesia, and the Philippines—markets representing a substantial concentration of Herbalife's active buyer base and diverse cultural contexts that could reveal critical localization needs.</p>
+                </div>
+            </div>
+
+            <div class="rationale-grid">
+                <div class="rationale-card">
+                    <div class="rationale-icon">📊</div>
+                    <div class="rationale-title">Business KPIs</div>
+                    <div class="rationale-text">We measured performance against Herbalife's previous global B2B/B2C app iteration, tracking conversion rates, cart abandonment, repeat purchase behavior, and average order value across markets.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">✅</div>
+                    <div class="rationale-title">Product & Design KPIs</div>
+                    <div class="rationale-text">Core metrics included task completion rates, System Usability Scale (SUS) scores, time-on-task measurements, and error rates during critical purchase flows.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">🤝</div>
+                    <div class="rationale-title">Stakeholder Collaboration</div>
+                    <div class="rationale-text">We partnered with both North American product teams and regionally-focused stakeholders to ensure our research design was culturally relevant and our findings actionable across organizational structures.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">👥</div>
+                    <div class="rationale-title">Recruitment Strategy</div>
+                    <div class="rationale-text">Herbalife's unique business structure includes multiple engagement levels. We recruited users across their hierarchy—from casual buyers to high-volume purchasers—ensuring our sample represented core users measured by purchase frequency and scale.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">💳</div>
+                    <div class="rationale-title">Checkout Journey Focus</div>
+                    <div class="rationale-text">A critical research priority was mapping the checkout journey and identifying pain points. The North American app leveraged Apple Pay and Google Wallet, but APAC markets had already developed mature in-app payment ecosystems with different patterns and expectations.</div>
+                </div>
+
+                <div class="rationale-card">
+                    <div class="rationale-icon">🌐</div>
+                    <div class="rationale-title">Language Assumption Testing</div>
+                    <div class="rationale-text">A key stakeholder assumption: Because Herbalife requires business proficiency in English for store ownership, North American app copy should be comprehensible to APAC users. We designed our methodology specifically to test this assumption.</div>
+                </div>
+            </div>
+
+            <div class="insight-block">
+                <div class="insight-header">
+                    <div class="insight-number">🔬</div>
+                    <div class="insight-title">Why Multi-Method Research?</div>
+                </div>
+                <div class="insight-content">
+                    <p>Testing the language assumption required going beyond traditional usability studies. While think-aloud sessions could reveal comprehension issues with copy, they wouldn't expose deeper problems with cultural relevance of product organization and information structure.</p>
+                    <p><strong>Our approach:</strong> We combined usability testing (to observe language comprehension and task completion) with tree testing (to reveal whether product taxonomy and mental models aligned across cultures). This dual approach allowed us to distinguish between surface-level translation issues and fundamental structural mismatches.</p>
+                    <p><strong>The goal wasn't just findings—it was capability building:</strong> We needed to answer critical questions with enough rigor that design could move forward confidently, while also creating clear opportunities for both visual design changes and information architecture improvements. With robust baseline data established, junior researchers could take on lower-risk follow-up studies like A/B testing design iterations and copy variations with mentoring support from me as lead researcher.</p>
+                </div>
+            </div>
+
+            <div class="opportunities-header">
+                <h3>Key Questions Driving the Research</h3>
+                <p>Our multi-method approach was designed to answer several interconnected questions about cross-cultural product experience</p>
+            </div>
+
+            <div class="opportunity-cards">
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Comprehension vs. Cultural Fit</div>
+                    <div class="opportunity-description">
+                        Can APAC users understand the English copy (comprehension), and does that copy feel appropriate and trustworthy in their cultural context (cultural fit)? These are distinct questions requiring different research methods.
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Checkout Flow Pain Points</div>
+                    <div class="opportunity-description">
+                        Where do users experience friction in the purchase journey? How do payment method expectations differ? What information do users need at each stage to feel confident proceeding?
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Information Architecture Alignment</div>
+                    <div class="opportunity-description">
+                        Do APAC users organize products and categories the same way North American users do? Does the navigation structure match their mental models and browsing behaviors?
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Trust Signal Priorities</div>
+                    <div class="opportunity-description">
+                        What information helps APAC users make confident purchase decisions? Do they prioritize the same content (reviews, certifications, ingredients) as North American users?
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Design Iteration Prioritization</div>
+                    <div class="opportunity-description">
+                        Which changes would have the highest impact on conversion? How should we sequence visual design updates versus information architecture changes?
+                    </div>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Research Capability Building</div>
+                    <div class="opportunity-description">
+                        What baseline data and frameworks could enable junior researchers to conduct follow-up studies independently? Where could low-risk A/B testing accelerate iteration?
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- My Role -->
         <div class="section">
             <div class="section-header">
